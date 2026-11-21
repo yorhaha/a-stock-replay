@@ -9,7 +9,7 @@
 - **总览**：20 年指数走势、回撤区间、20 日均成交额，支持对数/线性切换。
 - **周期**：八轮回撤的峰值→谷值、最大回撤、持续时长、单日最大跌幅、成交额萎缩、见底后表现、修复前高，以及指数分化与政策/市场节点。
 - **结构**：三类驱动矩阵（内因、加速器、催化剂）与三段反转框架（政策底、市场底、主升反转）。
-- **数据**：全量指标表，可下载 `assets/episodes.csv`。
+- **数据**：全量指标表，可下载 `assets/episodes.csv`；机器可读数据见 `assets/episodes.json` 与 `assets/data.json`。
 
 ## 数据口径
 
@@ -37,7 +37,7 @@ python3 -m http.server 4173
 python3 scripts/build_data.py
 ```
 
-生成 `assets/data.js` 与 `assets/episodes.csv`。
+生成 `assets/data.js`、`assets/data.json`、`assets/episodes.json` 与 `assets/episodes.csv`。
 
 ## 部署
 

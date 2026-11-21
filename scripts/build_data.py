@@ -267,7 +267,13 @@ payload = {
 }
 
 OUT.mkdir(exist_ok=True)
-(OUT / "data.js").write_text("window.MARKET_DATA = " + json.dumps(payload, ensure_ascii=False, separators=(",", ":")) + ";\n", encoding="utf-8")
+compact = json.dumps(payload, ensure_ascii=False, separators=(",", ":"))
+(OUT / "data.js").write_text("window.MARKET_DATA = " + compact + ";\n", encoding="utf-8")
+(OUT / "data.json").write_text(json.dumps(payload, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
+(OUT / "episodes.json").write_text(
+    json.dumps({"meta": payload["meta"], "summary": payload["summary"], "episodes": payload["episodes"]}, ensure_ascii=False, separators=(",", ":")),
+    encoding="utf-8",
+)
 
 # CSV companion
 cols = ["no", "name", "period", "start", "end", "peak", "trough", "drawdown", "months", "tradingDays", "maxDay", "amountPeak", "amountMin", "amountShrink", "oneYear", "recoveryMonths", "form"]
