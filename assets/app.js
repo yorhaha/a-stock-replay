@@ -680,7 +680,7 @@
       .join('');
 
     const statusLabel = ep.status === 'ongoing' ? '进行中' : '已完成';
-    const formLine = threeMonth ? `见底后 3 个月 ${threeMonth}` : '—';
+    const formLine = ep.status === 'ongoing' ? '尚未见底' : threeMonth ? `见底后 3 个月 ${threeMonth}` : '—';
 
     container.setAttribute('aria-labelledby', `ep-tab-${ep.id}`);
     container.innerHTML = `
@@ -700,7 +700,6 @@
         <span>${fmtNumber(ep.peak)}</span>
         <span class="detail-range__arrow">→</span>
         <span>${fmtNumber(ep.trough)}</span>
-        <span class="detail-range__delta">${fmtPct(ep.drawdown)}</span>
       </div>
 
       <div class="chart chart--detail" id="detailChart" role="img" aria-label="${ep.name}回撤路径"></div>
