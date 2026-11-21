@@ -1068,6 +1068,10 @@ h2 {
   opacity: 0.75;
 }
 
+.cross-row__track--empty {
+  background: transparent;
+}
+
 .cross-row__value {
   color: var(--down);
   font-family: var(--font-mono);

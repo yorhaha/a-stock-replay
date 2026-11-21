@@ -654,7 +654,7 @@
           return `
             <div class="cross-row">
               <span class="cross-row__name">${item.name}</span>
-              <span class="cross-row__track"></span>
+              <span class="cross-row__track cross-row__track--empty"></span>
               <span class="cross-row__value cross-row__value--empty">—</span>
             </div>`;
         }
