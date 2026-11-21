@@ -123,8 +123,8 @@
     const rect = svg.getBoundingClientRect();
     const sx = rect.width / viewWidth;
     const sy = rect.height / viewHeight;
-    const px = Math.min(Math.max(x * sx, 76), rect.width - 76);
-    const py = Math.max(42, y * sy);
+    const px = Math.min(Math.max(x * sx, 92), rect.width - 92);
+    const py = Math.max(78, y * sy);
     tip.innerHTML = html;
     tip.style.left = `${px}px`;
     tip.style.top = `${py}px`;
