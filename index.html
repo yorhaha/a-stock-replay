@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>上证指数回撤复盘 · 2006—2026</title>
+  <meta name="description" content="2006—2026 年上证指数八轮波段回撤的指数路径、驱动结构、政策节点与反转路径复盘。">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <meta name="theme-color" content="#fcfcfd">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="上证指数回撤复盘 · 2006—2026">
+  <meta property="og:description" content="八轮波段回撤的指数路径、驱动结构、政策节点与反转路径。">
+  <script>
+    (function () {
+      try {
+        var stored = localStorage.getItem('theme');
+        var theme = stored || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        document.documentElement.dataset.theme = theme;
+      } catch (e) {}
+    })();
+  </script>
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">跳至内容</a>
+
+  <header class="topbar">
+    <div class="topbar__inner">
+      <a class="brand" href="#overview" aria-label="回撤复盘 · 返回总览">
+        <svg class="brand__mark" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M3.5 6.5h17M3.5 12h17M3.5 17.5h17" opacity=".28"/>
+          <path d="M4 8.5l4.6 4.4 3.7-2.5 4 5.4 3.7-7.3" fill="none"/>
+        </svg>
+        <span class="brand__name">回撤复盘</span>
+      </a>
+
+      <nav class="nav" aria-label="页面导航">
+        <a href="#overview" data-nav="overview">总览</a>
+        <a href="#cycles" data-nav="cycles">周期</a>
+        <a href="#framework" data-nav="framework">结构</a>
+        <a href="#data" data-nav="data">数据</a>
+      </nav>
+
+      <div class="topbar__right">
+        <span class="asof">截至 2026-11-20</span>
+        <button class="icon-btn" id="themeToggle" type="button" aria-label="切换深浅色">
+          <svg class="icon-sun" viewBox="0 0 20 20" aria-hidden="true">
+            <circle cx="10" cy="10" r="3.4"/>
+            <path d="M10 1.8v2.1M10 16.1v2.1M1.8 10h2.1M16.1 10h2.1M4.2 4.2l1.5 1.5M14.3 14.3l1.5 1.5M15.8 4.2l-1.5 1.5M5.7 14.3l-1.5 1.5"/>
+          </svg>
+          <svg class="icon-moon" viewBox="0 0 20 20" aria-hidden="true">
+            <path d="M16.4 11.9A6.6 6.6 0 0 1 8.1 3.6a6.7 6.7 0 1 0 8.3 8.3Z"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <noscript><p class="noscript">本页图表需要启用 JavaScript。</p></noscript>
+    <section class="section section--overview" id="overview">
+      <div class="section-head">
+        <div>
+          <p class="kicker">2006—2026</p>
+          <h1>上证指数回撤复盘</h1>
+        </div>
+        <p class="section-summary" id="heroSummary">8 轮 · 7 轮完成 · 1 轮进行中</p>
+      </div>
+
+      <div class="stat-strip" id="statStrip"></div>
+
+      <figure class="chart-block">
+        <figcaption class="chart-toolbar">
+          <span class="chart-toolbar__label">指数走势与回撤区间</span>
+          <span class="chart-toolbar__spacer"></span>
+          <span class="legend"><i class="legend__swatch"></i>回撤区间</span>
+          <div class="segmented" role="group" aria-label="纵轴刻度">
+            <button type="button" data-scale="log" class="is-active">对数</button>
+            <button type="button" data-scale="linear">线性</button>
+          </div>
+        </figcaption>
+        <div class="chart chart--overview" id="overviewChart" role="img" aria-label="2006 年至 2026 年上证指数走势图，标注八轮回撤区间"></div>
+        <div class="episode-rail" id="episodeRail" role="group" aria-label="回撤区间快捷选择"></div>
+      </figure>
+    </section>
+
+    <section class="section" id="cycles">
+      <div class="section-head">
+        <div>
+          <p class="kicker">周期</p>
+          <h2>八轮回撤</h2>
+        </div>
+        <p class="section-summary">峰值 → 谷值 · 盘中口径</p>
+      </div>
+
+      <div class="explorer">
+        <div class="episode-list" id="episodeList" role="tablist" aria-label="回撤区间"></div>
+        <article class="episode-detail" id="episodeDetail" role="tabpanel" tabindex="0"></article>
+      </div>
+    </section>
+
+    <section class="section" id="framework">
+      <div class="section-head">
+        <div>
+          <p class="kicker">结构</p>
+          <h2>驱动与反转</h2>
+        </div>
+        <p class="section-summary">三类驱动 · 三段反转</p>
+      </div>
+
+      <div class="subsection">
+        <div class="subsection-head">
+          <h3>三类驱动</h3>
+          <p>内因 · 加速器 · 催化剂</p>
+        </div>
+        <div class="matrix-wrap">
+          <table class="matrix" id="driverMatrix" aria-label="八轮回撤的三类驱动分布"></table>
+        </div>
+      </div>
+
+      <div class="subsection subsection--reversal">
+        <div class="subsection-head">
+          <h3>三段反转</h3>
+          <p>政策底 → 市场底 → 主升反转</p>
+        </div>
+        <div class="stage-visual" aria-hidden="true">
+          <svg viewBox="0 0 960 196" preserveAspectRatio="xMidYMid meet">
+            <defs>
+              <linearGradient id="stageFade" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="var(--down-soft)" stop-opacity=".7"/>
+                <stop offset="1" stop-color="var(--down-soft)" stop-opacity="0"/>
+              </linearGradient>
+            </defs>
+            <rect x="402" y="34" width="150" height="126" rx="8" fill="var(--down-soft)" opacity=".65"/>
+            <path d="M36 44 C 176 54, 310 128, 414 148 S 494 163, 548 148 C 666 116, 762 62, 924 34" fill="none" stroke="var(--text-tertiary)" stroke-width="1.5" vector-effect="non-scaling-stroke"/>
+            <path d="M36 44 C 176 54, 310 128, 414 148 S 494 163, 548 148 C 666 116, 762 62, 924 34 L 924 176 L 36 176 Z" fill="url(#stageFade)" opacity=".55"/>
+            <line x1="414" y1="38" x2="414" y2="176" stroke="var(--accent)" stroke-width="1" stroke-dasharray="3 4" vector-effect="non-scaling-stroke"/>
+            <line x1="548" y1="38" x2="548" y2="176" stroke="var(--text-tertiary)" stroke-width="1" stroke-dasharray="3 4" vector-effect="non-scaling-stroke"/>
+            <line x1="770" y1="38" x2="770" y2="176" stroke="var(--text-tertiary)" stroke-width="1" stroke-dasharray="3 4" vector-effect="non-scaling-stroke"/>
+            <circle cx="414" cy="148" r="3.5" fill="var(--accent)"/>
+            <circle cx="548" cy="148" r="3.5" fill="var(--text-secondary)"/>
+            <circle cx="770" cy="74" r="3.5" fill="var(--text-secondary)"/>
+            <text x="414" y="26" text-anchor="middle" class="stage-svg-label">政策底</text>
+            <text x="548" y="26" text-anchor="middle" class="stage-svg-label">市场底</text>
+            <text x="770" y="26" text-anchor="middle" class="stage-svg-label">主升反转</text>
+            <text x="481" y="192" text-anchor="middle" class="stage-svg-sub">磨底区</text>
+          </svg>
+        </div>
+        <div class="stage-grid" id="stageGrid"></div>
+      </div>
+    </section>
+
+    <section class="section" id="data">
+      <div class="section-head">
+        <div>
+          <p class="kicker">数据</p>
+          <h2>全量指标</h2>
+        </div>
+        <a class="text-link" href="assets/episodes.csv" download>下载 CSV</a>
+      </div>
+      <div class="table-scroll">
+        <table class="data-table" id="dataTable">
+          <thead>
+            <tr>
+              <th scope="col">区间</th>
+              <th scope="col">峰值 → 谷值</th>
+              <th scope="col" class="num">最大回撤</th>
+              <th scope="col" class="num">持续</th>
+              <th scope="col" class="num">单日最大</th>
+              <th scope="col" class="num">成交额萎缩</th>
+              <th scope="col" class="num">见底后 12 个月</th>
+              <th scope="col" class="num">修复前高</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>上证指数日线 · 2006-01-03—2026-11-20 · 最大回撤按盘中最高/最低计 · 走势曲线为收盘价 · 成交额为 20 个交易日均值 · 来源：东方财富</p>
+    <p class="footer__meta"><a href="https://github.com/yorhaha/a-stock-replay" rel="noopener">GitHub</a><span aria-hidden="true">·</span><span>仅供研究，不构成投资建议</span></p>
+  </footer>
+
+  <script src="assets/data.js"></script>
+  <script src="assets/app.js"></script>
+</body>
+</html>
