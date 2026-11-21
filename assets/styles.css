@@ -968,6 +968,10 @@ h2 {
   color: var(--down);
 }
 
+.metric__value--up {
+  color: var(--up);
+}
+
 .metric__value--muted {
   color: var(--text-tertiary);
   font-weight: 500;
