@@ -201,11 +201,16 @@ a {
   color: var(--text);
 }
 
-.brand__mark path:last-child {
+.brand__mark path {
+  fill: none;
   stroke: currentColor;
-  stroke-width: 1.6;
+  stroke-width: 1.1;
   stroke-linecap: round;
   stroke-linejoin: round;
+}
+
+.brand__mark path:last-child {
+  stroke-width: 1.6;
 }
 
 .brand__name {
