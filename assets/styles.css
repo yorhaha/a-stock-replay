@@ -614,7 +614,7 @@ h2 {
 
 .chart-area--amount {
   fill: var(--surface-2);
-  opacity: 0.8;
+  opacity: 0.55;
 }
 
 .chart-line--amount {
