@@ -516,7 +516,7 @@ h2 {
 .chart-axis {
   fill: var(--text-tertiary);
   font-family: var(--font-mono);
-  font-size: 9.5px;
+  font-size: 10px;
   letter-spacing: 0.01em;
 }
 
@@ -982,7 +982,7 @@ h2 {
   margin-top: 2px;
   color: var(--text-tertiary);
   font-family: var(--font-mono);
-  font-size: 9px;
+  font-size: 10px;
   font-variant-numeric: tabular-nums;
 }
 
@@ -1359,7 +1359,7 @@ h2 {
   padding: 8px 10px 9px;
   border-bottom: 1px solid var(--border);
   color: var(--text-tertiary);
-  font-size: 9.5px;
+  font-size: 10px;
   font-weight: 500;
   letter-spacing: 0.01em;
   text-align: left;
@@ -1410,7 +1410,7 @@ h2 {
 .table-range__period {
   color: var(--text-tertiary);
   font-family: var(--font-mono);
-  font-size: 9px;
+  font-size: 9.5px;
 }
 
 .table-pair {

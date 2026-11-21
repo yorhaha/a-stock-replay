@@ -922,7 +922,12 @@
       for (const item of sections) {
         if (item.section.offsetTop <= y) active = item;
       }
-      links.forEach((link) => link.classList.toggle('is-active', link === active.link));
+      links.forEach((link) => {
+        const isActive = link === active.link;
+        link.classList.toggle('is-active', isActive);
+        if (isActive) link.setAttribute('aria-current', 'page');
+        else link.removeAttribute('aria-current');
+      });
       ticking = false;
     };
     window.addEventListener('scroll', () => {
