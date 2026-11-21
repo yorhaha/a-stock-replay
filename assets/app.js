@@ -595,6 +595,7 @@
       button.dataset.episode = ep.id;
       button.setAttribute('role', 'tab');
       button.id = `ep-tab-${ep.id}`;
+      button.setAttribute('aria-label', `${ep.period} ${ep.name}${ep.status === 'ongoing' ? '，进行中' : ''}，最大回撤 ${fmtPct(ep.drawdown)}`);
       button.setAttribute('aria-controls', 'episodeDetail');
       button.setAttribute('aria-selected', String(ep.id === state.selected));
       button.tabIndex = ep.id === state.selected ? 0 : -1;
@@ -602,7 +603,7 @@
         <span class="ep-row__no">${ep.no}</span>
         <span class="ep-row__body">
           <span class="ep-row__period">${ep.period}</span>
-          <span class="ep-row__name">${ep.name}${ep.status === 'ongoing' ? '<span class="ep-row__live" aria-label="进行中"></span>' : ''}</span>
+          <span class="ep-row__name">${ep.name}${ep.status === 'ongoing' ? '<span class="ep-row__live" aria-hidden="true"></span>' : ''}</span>
         </span>
         <span class="ep-row__dd">${fmtPct(ep.drawdown)}</span>
       `;
@@ -869,7 +870,7 @@
         : ep.recoveryDate
           ? `${ep.recoveryMonths} 月`
           : '<span class="is-muted">未修复</span>';
-      const live = ep.status === 'ongoing' ? '<span class="ep-row__live" aria-label="进行中"></span>' : '';
+      const live = ep.status === 'ongoing' ? '<span class="ep-row__live" aria-hidden="true"></span>' : '';
       return `
         <tr>
           <td>
